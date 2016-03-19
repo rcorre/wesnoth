@@ -309,6 +309,22 @@ bool command_executor::execute_command(const hotkey_command&  cmd, int /*index*/
 		case HOTKEY_ZOOM_DEFAULT:
 			zoom_default();
 			break;
+		case HOTKEY_SCROLL_UP:
+			DBG_G << "command_executor scroll up";
+			scroll_up();
+			break;
+		case HOTKEY_SCROLL_DOWN:
+			DBG_G << "command_executor scroll down";
+			scroll_down();
+			break;
+		case HOTKEY_SCROLL_LEFT:
+			DBG_G << "command_executor scroll left";
+			scroll_left();
+			break;
+		case HOTKEY_SCROLL_RIGHT:
+			DBG_G << "command_executor scroll right";
+			scroll_right();
+			break;
 		case HOTKEY_MAP_SCREENSHOT:
 			map_screenshot();
 			break;

@@ -94,6 +94,10 @@ public:
 	virtual void replay_show_team1() {}
 	virtual void replay_skip_animation() {}
 	virtual void replay_exit() {}
+	virtual void scroll_up() {}
+	virtual void scroll_down() {}
+	virtual void scroll_left() {}
+	virtual void scroll_right() {}
 	virtual void whiteboard_toggle() {}
 	virtual void whiteboard_execute_action() {}
 	virtual void whiteboard_execute_all_actions() {}

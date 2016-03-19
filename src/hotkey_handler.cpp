@@ -218,6 +218,26 @@ void play_controller::hotkey_handler::toggle_accelerated_speed()
 	}
 }
 
+void play_controller::hotkey_handler::scroll_up()
+{
+	gui()->announce(std::string(_("up!")), font::NORMAL_COLOR);
+}
+
+void play_controller::hotkey_handler::scroll_down()
+{
+	gui()->announce(std::string(_("down!")), font::NORMAL_COLOR);
+}
+
+void play_controller::hotkey_handler::scroll_left()
+{
+	gui()->announce(std::string(_("left!")), font::NORMAL_COLOR);
+}
+
+void play_controller::hotkey_handler::scroll_right()
+{
+	gui()->announce(std::string(_("right!")), font::NORMAL_COLOR);
+}
+
 bool play_controller::hotkey_handler::execute_command(const hotkey::hotkey_command& cmd, int index)
 {
 	hotkey::HOTKEY_COMMAND command = cmd.id;
@@ -302,6 +322,10 @@ bool play_controller::hotkey_handler::can_execute_command(const hotkey::hotkey_c
 	case hotkey::HOTKEY_SAVE_REPLAY:
 	case hotkey::HOTKEY_LABEL_SETTINGS:
 	case hotkey::LUA_CONSOLE:
+	case hotkey::HOTKEY_SCROLL_UP:
+	case hotkey::HOTKEY_SCROLL_DOWN:
+	case hotkey::HOTKEY_SCROLL_LEFT:
+	case hotkey::HOTKEY_SCROLL_RIGHT:
 		return true;
 
 	// Commands that have some preconditions:
